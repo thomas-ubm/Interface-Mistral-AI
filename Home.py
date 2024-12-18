@@ -50,19 +50,18 @@ user_country = st.selectbox("Selectionnez votre pays", ["France", "Espagne", "US
 import pandas as pd
 path_url = "https://raw.githubusercontent.com/Quera-fr/My-Credit/refs/heads/main/Analyse%20des%20donn%C3%A9es/test.csv"
 
-df = pd.read_csv(path_url , sep=';')
+# df = pd.read_csv(path_url , sep=';')
 # st.write(df)
-edited_df = st.data_editor(df)
+# edited_df = st.data_editor(df)
 
 
-@st.cache_data
-def convert_df(df):
-    # IMPORTANT: Cache the conversion to prevent computation on every rerun
-    return df.to_csv().encode("utf-8")
-  
+df = pd.read_csv(path_url, sep=';')
+ 
+edited_df = st.data_editor(df).to_csv().encode("utf-8")
+ 
 st.download_button(
     label="Download data as CSV",
-    data=csv,
+    data=edited_df,
     file_name="large_df.csv",
     mime="text/csv",
 )
