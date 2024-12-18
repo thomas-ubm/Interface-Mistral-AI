@@ -30,7 +30,8 @@ print(user_name)
 
 
 # Création d'un bouton
-
+if st.button("Press OK"):
+  st.write(user_name)
 
 # Création d'un slider
 
