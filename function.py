@@ -4,16 +4,27 @@ from time import sleep
 
 def get_chat(client, user_model, prompt):
     chat_response = client.chat.complete(
-        model= user_model,
-        messages = [
-            {
-                "role": "user",
-                "content": prompt,
-            },
-        ],
+    model= user_model,
+    messages = [
+    {
+        "role": "user",
+        "content": prompt,
+    },
+    ],
     )
     return chat_response.choices[0].message.content
 
+def get_agent(client, user_agent, prompt):
+    chat_response = client.agents.complete(
+    agent_id = user_agent,
+    messages = [
+    {
+        "role": "user",
+        "content": "Berlin",
+    },
+    ],
+    )
+    return chat_response.choices[0].message.content
 
 
 def get_ner(client, prompt):
