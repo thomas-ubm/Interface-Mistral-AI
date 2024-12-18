@@ -46,9 +46,6 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-# Créer un fichier
-with open("pages/historique/File.txt", "w") as f:   
-    f.write("Hello World form ")
 
 # React to user input
 if prompt := st.chat_input("What is up?"):
