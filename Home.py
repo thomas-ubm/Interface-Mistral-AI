@@ -40,9 +40,12 @@ st.sidebar.video("https://www.youtube.com/watch?v=sgnrL7yo1TE")
 
 
 # Création d'un slider
-st.slider("Quel est votre age ?", 18, 99, 30)
+user_age = st.slider("Quel est votre age ?", 18, 99, 30)
 
-# Lecture d'un fichier csv avec mandas
+
+
+
+# Lecture d'un fichier csv avec pandas
 
 
 
