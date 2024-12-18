@@ -18,6 +18,11 @@ if "messages" not in st.session_state:
 if st.button("Vider l'historique"):
   st.session_state.messages = []
 
+# Création d'un bouton
+with open('histo.csv', mode='rb') as f:
+    st.download_button(label='Télécharger l'historique', data=f, file_name='histo.csv')
+
+
 choix = st.sidebar.radio("Choisissez : ", ["Modèle", "Agent"], index=0)
 
 
@@ -41,10 +46,6 @@ if user_agent == "Emojibot" :
     user_agent = "ag:56f583a3:20241216:emojibot:3a89090a"
 
 
-with open('TEST.txt', mode='w') as f:
-    f.write ("test")
-with open('TEST.txt', mode='rb') as f:
-    st.download_button(label='Download', data=f, file_name='TEST.txt')
 
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
