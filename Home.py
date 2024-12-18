@@ -14,7 +14,7 @@ st.write("""
 # Titre
 ## Sous-titre
 
-**Text en gras***
+**Text en gras**
   
 `print("Hello World")`
   
