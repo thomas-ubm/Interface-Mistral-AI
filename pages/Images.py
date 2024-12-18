@@ -15,7 +15,7 @@ img_url = st.text_input("")
 # Création d'un bouton
 if st.button("Analyser"):
   st.write(img_url)
-  response = get_sentiment(client, img_url)
+  response = get_img(client, img_url)
   st.write(response)
 
 
