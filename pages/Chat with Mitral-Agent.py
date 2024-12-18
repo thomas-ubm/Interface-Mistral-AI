@@ -26,7 +26,7 @@ user_agent = st.selectbox("Selectionnez un agent", ["Culture-G", "Villes-par-hab
 
 # Culture-G : ag:56f583a3:20241214:untitled-agent:5acbcaed
 if user_agent = "Culture-G"
-    user_agent = "ag:56f583a3:20241214:untitled-agent:5acbcaed
+    user_agent = "ag:56f583a3:20241214:untitled-agent:5acbcaed"
     "
 # Villes-par-habitants : ag:56f583a3:20241216:villes-par-habitants:babc8335
 if user_agent = "Villes-par-habitants"
