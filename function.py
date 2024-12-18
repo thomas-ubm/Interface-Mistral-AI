@@ -1,6 +1,21 @@
 import mistralai
 from time import sleep
 
+
+def get_chat(client, prompt, user_model):
+    chat_response = client.chat.complete(
+        model= user_model,
+        messages = [
+            {
+                "role": "user",
+                "content": prompt,
+            },
+        ],
+    )
+    return chat_response.choices[0].message.content
+
+
+
 def get_ner(client, prompt):
     response = client.chat.complete(
         model='mistral-large-latest',
