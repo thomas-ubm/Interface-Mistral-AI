@@ -20,7 +20,7 @@ def get_agent(client, user_agent, prompt):
     messages = [
     {
         "role": "user",
-        "content": "Berlin",
+        "content": prompt,
     },
     ],
     )
