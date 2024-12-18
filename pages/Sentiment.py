@@ -6,13 +6,13 @@ from mistralai import Mistral
 api_keys = st.sidebar.text_input("apikeys")
 client = Mistral(api_key=api_keys)
 
-st.title("Traduction")
+st.title("Analyse de sentiments")
 
-st.subheader("Saisir ici le texte à traduire")
+st.subheader("Saisir ici le texte à analyser")
 prompt = st.text_area("")
 
 # Création d'un bouton
-if st.button("Traduire"):
+if st.button("Analyser"):
   st.write(prompt)
-  response = get_trad(client, prompt)
+  response = get_sentiment(client, prompt)
   st.write(response)
