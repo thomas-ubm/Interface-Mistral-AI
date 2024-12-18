@@ -16,3 +16,7 @@ if st.button("Analyser"):
   st.write(prompt)
   response = get_sentiment(client, prompt)
   st.write(response)
+
+# prompt1 = "J'ai passé une journée incroyable dans ce restaurant, le service était impeccable et les plats délicieux. Je reviendrai sans hésiter !"
+# prompt2 = "C'était une expérience horrible, le personnel était désagréable et la nourriture immangeable. Je ne recommande absolument pas."
+# prompt3 = "L'hôtel était correct, rien d'exceptionnel, mais il correspondait à ce que j'attendais pour ce prix."
