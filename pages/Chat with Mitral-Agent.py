@@ -43,7 +43,9 @@ if user_agent == "Emojibot" :
 
 with open('TEST.txt', mode='w') as f:
     f.write ("test")
-
+btn = st.download_button(label='Download',
+                                    data=file,
+                                    file_name='TEST.txt')
 
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
