@@ -19,14 +19,25 @@ if st.button("Vider l'historique"):
   st.session_state.messages = []
 
 # Création d'une liste
-user_model = st.selectbox("Selectionnez un modèle", ["mistral-large-latest", "ministral-8b-latest", "mistral-small-latest"])
+user_model = st.sidebar.selectbox("Selectionnez un modèle", ["mistral-large-latest", "ministral-8b-latest", "mistral-small-latest"])
 
 # Création d'une liste
-user_agent = st.sidebar.selectbox("Selectionnez un modèle", ["Culture-G", "Villes-par-habitants", "Emojibot"])
+user_agent = st.selectbox("Selectionnez un agent", ["Culture-G", "Villes-par-habitants", "Emojibot"])
 
 # Culture-G : ag:56f583a3:20241214:untitled-agent:5acbcaed
+if user_agent = "Culture-G"
+    user_agent = "ag:56f583a3:20241214:untitled-agent:5acbcaed
+    "
 # Villes-par-habitants : ag:56f583a3:20241216:villes-par-habitants:babc8335
+if user_agent = "Villes-par-habitants"
+    user_agent = "ag:56f583a3:20241216:villes-par-habitants:babc8335"
+
 # Emojibot : ag:56f583a3:20241216:emojibot:3a89090a
+if user_agent = "Emojibot"
+    user_agent = "ag:56f583a3:20241216:emojibot:3a89090a"
+
+
+
 
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
