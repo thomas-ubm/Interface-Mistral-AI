@@ -9,7 +9,7 @@ client = Mistral(api_key=api_keys)
 st.title("Traduction")
 
 st.subheader("Saisir ici le texte à traduire")
-prompt = st.text_area()
+prompt = st.text_area("")
 
 # Création d'un bouton
 if st.button("Traduire"):
