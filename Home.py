@@ -5,9 +5,23 @@ import streamlit as st
 st.title('Interface-Mistral-AI ')
 
 # CRéatin d'un sous titre
-st.subheader ('Mistral')
+st.subheader ("Mistral AI")
 
 # Création d'une zone de texte
+st.write("Introdcution à mistral AI")
+
+st.wrtie("""
+  # Titre
+  ## Sous-titre
+
+  **Text en gras***
+  
+  `print("Hello World")`
+  
+
+""")
+
+
 
 # Création d'un bouton
 
