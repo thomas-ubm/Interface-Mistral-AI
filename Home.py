@@ -33,13 +33,40 @@ if st.button("Press OK"):
 
 
 # Création d'une image
-st.image('https://upload.wikimedia.org/wikipedia/fr/thumb/2/24/Universite_bordeaux-montaigne_2014_logo.svg/1200px-Universite_bordeaux-montaigne_2014_logo.svg.png')
+st.sidebare.image('https://upload.wikimedia.org/wikipedia/fr/thumb/2/24/Universite_bordeaux-montaigne_2014_logo.svg/1200px-Universite_bordeaux-montaigne_2014_logo.svg.png')
 
 # Création d'une vidéo
-st.video('https://www.youtube.com/watch?v=Q4x_E1WD57s')
+st.sidebare.video("https://www.youtube.com/watch?v=sgnrL7yo1TE")
+
+
+
+
 
 # Création d'un slider
 
 
 # Lecture d'un fichier csv avec mandas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
