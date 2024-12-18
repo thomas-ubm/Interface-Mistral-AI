@@ -4,7 +4,7 @@ from mistralai import Mistral
 
 # Clé à utiliser : trA3qWPCyCxnGFqXozRTOh1bSNMoZmQ2
 # api_keys = st.sidebar.text_input("apikeys")
-api_keys = st.secret("MISTRAL_API")
+api_keys = st.secrets("MISTRAL_API")
 
 client = Mistral(api_key=api_keys)
 
