@@ -3,8 +3,7 @@ from function import *
 from mistralai import Mistral
 
 # Titre à la page
-#page_title="Ex-stream-ly Cool App",    page_icon="🧊",    layout="wide",
-st.set_page_config("Titre à la page")
+st.set_page_config("Ex-stream-ly Cool App",    page_icon="🧊",    layout="wide",)
 
 # Clé à utiliser : trA3qWPCyCxnGFqXozRTOh1bSNMoZmQ2
 # api_keys = st.sidebar.text_input("apikeys")
