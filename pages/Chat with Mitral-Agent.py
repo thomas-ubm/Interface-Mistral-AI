@@ -47,7 +47,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 # Créer un fichier
-with open("historique/File.txt", "w") as f:   
+with open("pages/historique/File.txt", "w") as f:   
     f.write("Hello World form ")
 
 # React to user input
