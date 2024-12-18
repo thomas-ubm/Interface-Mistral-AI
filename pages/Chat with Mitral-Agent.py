@@ -19,7 +19,9 @@ if st.button("Vider l'historique"):
   st.session_state.messages = []
 
 
-choix = st.sidebar.radio(["Modèle", "Agent"])
+choix = st.sidebar.radio(["Modèle", "Agent"],
+                        index=None,
+                        )
 
 if choix == "Modèle":
     st.write("Chat avec un modèle")
