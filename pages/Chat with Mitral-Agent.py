@@ -67,7 +67,7 @@ if prompt := st.chat_input("What is up?"):
 
     # Création d'un fichier
     with open('histo.csv', mode='w') as f:
-        f.write (st.session_state.messages.append({"role": "user", "content": prompt}))
+        f.write ({"role": "user", "content": prompt})
 
 
     
