@@ -8,18 +8,12 @@ client = Mistral(api_key=api_keys)
 
 st.title('Traduction')
 
+st.subtitle('Saisissez ici le texte à traduire')
+prompt = st.text_area()
+
 # Création d'un bouton
-if st.button("Press OK"):
-  st.write(user_name)
+if st.button("Traduire"):
+  st.write(prompt)
   response = get_ner(client, prompt)
   st.write(response)
 
-
-prompt = st.text_area("""
-
-
-""")
-
-
-response = get_ner(client, prompt)
-st.write(response)
