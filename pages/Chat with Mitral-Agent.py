@@ -71,7 +71,7 @@ if prompt := st.chat_input("What is up?"):
 
     # Ecriture dans le fichier
     with open('histo.csv', 'w') as csvfile:
-        writer.writerow('Role': "user", 'Contenu': prompt)
+        writer.writerow({'Role': "user", 'Contenu': prompt})
 
 
     
@@ -91,4 +91,4 @@ if prompt := st.chat_input("What is up?"):
    
     # Ecriture dans le fichier
     with open('histo.csv', 'w') as csvfile:
-        writer.writerow('Role': "assistant", 'Contenu': response)
+        writer.writerow({'Role': "assistant", 'Contenu': response})
