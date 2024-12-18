@@ -10,7 +10,7 @@ st.subheader ("Mistral AI")
 # Création d'une zone de texte
 st.write("Introdcution à mistral AI")
 
-st.wrtie("""
+st.write("""
   # Titre
   ## Sous-titre
 
