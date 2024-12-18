@@ -22,10 +22,10 @@ if st.button("Vider l'historique"):
 # Création d'un fichier
 import csv
 
-with open('histo.csv', 'w') as csvfile:
-    fieldnames = ['Role', 'Contenu']
-    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-    writer.writeheader()
+#with open('histo.csv', 'w') as csvfile:
+#    fieldnames = ['Role', 'Contenu']
+#    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+#    writer.writeheader()
 
 # Création d'un bouton
 with open('histo.csv', mode='rb') as f:
@@ -70,11 +70,11 @@ if prompt := st.chat_input("What is up?"):
     st.session_state.messages.append({"role": "user", "content": prompt})
 
     # Ecriture dans le fichier
-    with open('histo.csv', 'w') as csvfile:
-        fieldnames = ['Role', 'Contenu']
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        #writer.writeheader()
-        writer.writerow({'Role': "user", 'Contenu': prompt})
+    #with open('histo.csv', 'w') as csvfile:
+    #    fieldnames = ['Role', 'Contenu']
+    #    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    #    #writer.writeheader()
+    #    writer.writerow({'Role': "user", 'Contenu': prompt})
 
 
     
@@ -93,8 +93,8 @@ if prompt := st.chat_input("What is up?"):
     st.session_state.messages.append({"role": "assistant", "content": response})
    
     # Ecriture dans le fichier
-    with open('histo.csv', 'w') as csvfile:
-        fieldnames = ['Role', 'Contenu']
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-       # writer.writeheader()
-        writer.writerow({'Role': "assistant", 'Contenu': response})
+    #with open('histo.csv', 'w') as csvfile:
+    #    fieldnames = ['Role', 'Contenu']
+    #    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    #   # writer.writeheader()
+    #    writer.writerow({'Role': "assistant", 'Contenu': response})
