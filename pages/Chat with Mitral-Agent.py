@@ -18,13 +18,9 @@ if "messages" not in st.session_state:
 if st.button("Vider l'historique"):
   st.session_state.messages = []
 
-
 choix = st.sidebar.radio("Choisissez : ", ["Modèle", "Agent"], index=None)
 
-if choix == "Modèle":
-    st.write("Chat avec un modèle")
-else:
-    st.write("CHat avec un agent")
+
 
 # Création d'une liste
 user_model = st.sidebar.selectbox("Selectionnez un modèle", ["mistral-large-latest", "ministral-8b-latest", "mistral-small-latest"])
@@ -45,8 +41,6 @@ if user_agent == "Emojibot" :
     user_agent = "ag:56f583a3:20241216:emojibot:3a89090a"
 
 
-
-
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
@@ -60,7 +54,12 @@ if prompt := st.chat_input("What is up?"):
     st.session_state.messages.append({"role": "user", "content": prompt})
 
     # response = f"Echo: {prompt}"
-    response = get_chat(client, user_model, prompt)
+    if choix == "Modèle":
+        st.write("Chat avec un modèle")
+        response = get_chat(client, user_model, prompt)
+    else:
+        st.write("Chat avec un agent")
+        response = get_agent(client, user_agent, prompt)
     
     # Display assistant response in chat message container
     with st.chat_message("assistant"):
