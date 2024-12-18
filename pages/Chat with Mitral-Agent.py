@@ -63,7 +63,7 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
         #read in the json
-        df = pd.read_json(message)
+        df = pd.read_json(st.session_state.messages)
         # write the csv
         df.to_csv("histo.csv")
 
