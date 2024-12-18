@@ -18,10 +18,8 @@ if "messages" not in st.session_state:
 if st.button("Vider l'historique"):
   st.session_state.messages = []
 
-
-mistral-large-latest
-ministral-8b-latest
-mistral-small-latest
+# Création d'une liste
+user_country = st.selectbox("Selectionnez un modèle", ["mistral-large-latest", "ministral-8b-latest", "mistral-small-latest"])
 
 
 # Display chat messages from history on app rerun
