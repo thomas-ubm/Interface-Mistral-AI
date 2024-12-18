@@ -20,8 +20,8 @@ if st.button("Vider l'historique"):
 
 
 # Création d'un fichier
-# with open('histo.csv', mode='w') as f:
-#    f.write ("")
+with open('histo.csv', mode='w') as f: 
+    f.write ("")
 
 # Création d'un bouton
 with open('histo.csv', mode='rb') as f:
