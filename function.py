@@ -2,7 +2,7 @@ import mistralai
 from time import sleep
 
 
-def get_chat(client, prompt, user_model):
+def get_chat(client, user_model, prompt):
     chat_response = client.chat.complete(
         model= user_model,
         messages = [
