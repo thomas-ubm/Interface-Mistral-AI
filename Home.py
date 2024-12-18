@@ -8,7 +8,7 @@ st.title('Interface-Mistral-AI ')
 st.subheader ("Mistral AI")
 
 # Création d'une zone de texte
-st.write("Introdcution à mistral AI")
+st.write("Introduction à mistral AI")
 
 st.write("""
   # Titre
