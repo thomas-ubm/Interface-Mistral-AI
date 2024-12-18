@@ -1,6 +1,8 @@
 from function import *
 from mistralai import Mistral
 import streamlit as st
+import pandas as pd
+
 
 # Clé à utiliser : trA3qWPCyCxnGFqXozRTOh1bSNMoZmQ2
 # api_keys = st.sidebar.text_input("apikeys")
@@ -60,6 +62,10 @@ if user_agent == "Emojibot" :
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
+        #read in the json
+        df = pd.read_json(message)
+        # write the csv
+        df.to_csv("histo.csv")
 
 
 # React to user input
