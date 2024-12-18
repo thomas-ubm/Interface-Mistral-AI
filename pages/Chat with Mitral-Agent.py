@@ -71,6 +71,9 @@ if prompt := st.chat_input("What is up?"):
 
     # Ecriture dans le fichier
     with open('histo.csv', 'w') as csvfile:
+        fieldnames = ['first_name', 'last_name']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
         writer.writerow({'Role': "user", 'Contenu': prompt})
 
 
@@ -91,4 +94,7 @@ if prompt := st.chat_input("What is up?"):
    
     # Ecriture dans le fichier
     with open('histo.csv', 'w') as csvfile:
+        fieldnames = ['first_name', 'last_name']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
         writer.writerow({'Role': "assistant", 'Contenu': response})
