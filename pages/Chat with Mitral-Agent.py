@@ -2,7 +2,8 @@ from function import *
 from mistralai import Mistral
 import streamlit as st
 import pandas as pd
-
+import json
+import csv
 
 # Clé à utiliser : trA3qWPCyCxnGFqXozRTOh1bSNMoZmQ2
 # api_keys = st.sidebar.text_input("apikeys")
@@ -20,11 +21,6 @@ if "messages" not in st.session_state:
 if st.button("Vider l'historique"):
   st.session_state.messages = []
 
-
-
-
-# Création d'un fichier
-import csv
 
 #with open('histo.csv', 'w') as csvfile:
 #    fieldnames = ['Role', 'Contenu']
@@ -108,10 +104,10 @@ if prompt := st.chat_input("What is up?"):
 
 
 #read in the json
-st.write(st.session_state.messages)
-#df = pd.read_json(st.session_state.messages)
+#st.write(st.session_state.messages)
+df = pd.read_json(st.session_state.messages)
 # write the csv
-#df.to_csv("histo.csv")
+df.to_csv("histo.csv")
 
 
 
