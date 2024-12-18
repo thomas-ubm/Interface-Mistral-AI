@@ -33,10 +33,10 @@ if st.button("Press OK"):
 
 
 # Création d'une image
-st.sidebare.image('https://upload.wikimedia.org/wikipedia/fr/thumb/2/24/Universite_bordeaux-montaigne_2014_logo.svg/1200px-Universite_bordeaux-montaigne_2014_logo.svg.png')
+st.sidebar.image('https://upload.wikimedia.org/wikipedia/fr/thumb/2/24/Universite_bordeaux-montaigne_2014_logo.svg/1200px-Universite_bordeaux-montaigne_2014_logo.svg.png')
 
 # Création d'une vidéo
-st.sidebare.video("https://www.youtube.com/watch?v=sgnrL7yo1TE")
+st.sidebar.video("https://www.youtube.com/watch?v=sgnrL7yo1TE")
 
 
 
