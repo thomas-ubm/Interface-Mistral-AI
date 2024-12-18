@@ -18,11 +18,21 @@ if "messages" not in st.session_state:
 if st.button("Vider l'historique"):
   st.session_state.messages = []
 
+
+choix = st.sidebar.radio(
+    ["Modèle", "Agent"]
+)
+
+if choix == "Modèle":
+    st.write("Chat avec un modèle")
+else:
+    st.write("CHat avec un agent")
+
 # Création d'une liste
 user_model = st.sidebar.selectbox("Selectionnez un modèle", ["mistral-large-latest", "ministral-8b-latest", "mistral-small-latest"])
 
 # Création d'une liste
-user_agent = st.selectbox("Selectionnez un agent", ["Culture-G", "Villes-par-habitants", "Emojibot"])
+user_agent = st.sidebar.selectbox("Selectionnez un agent", ["Culture-G", "Villes-par-habitants", "Emojibot"])
 
 # Culture-G : ag:56f583a3:20241214:untitled-agent:5acbcaed
 if user_agent == "Culture-G" :
