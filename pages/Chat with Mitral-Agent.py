@@ -18,6 +18,12 @@ if "messages" not in st.session_state:
 if st.button("Vider l'historique"):
   st.session_state.messages = []
 
+
+mistral-large-latest
+ministral-8b-latest
+mistral-small-latest
+
+
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
