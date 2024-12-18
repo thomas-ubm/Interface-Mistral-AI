@@ -21,6 +21,8 @@ if st.button("Vider l'historique"):
   st.session_state.messages = []
 
 
+
+
 # Création d'un fichier
 import csv
 
@@ -62,10 +64,9 @@ if user_agent == "Emojibot" :
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
-        #read in the json
-        df = pd.read_json(st.session_state.messages)
-        # write the csv
-        df.to_csv("histo.csv")
+        
+        
+       
 
 
 # React to user input
@@ -104,3 +105,13 @@ if prompt := st.chat_input("What is up?"):
     #    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     #   # writer.writeheader()
     #    writer.writerow({'Role': "assistant", 'Contenu': response})
+
+
+#read in the json
+df = pd.read_json(st.session_state.messages)
+# write the csv
+df.to_csv("histo.csv")
+
+
+
+
