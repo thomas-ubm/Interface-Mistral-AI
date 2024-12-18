@@ -22,7 +22,7 @@ if st.button("Vider l'historique"):
 user_model = st.selectbox("Selectionnez un modèle", ["mistral-large-latest", "ministral-8b-latest", "mistral-small-latest"])
 
 # Création d'une liste
-user_agent = st.selectbox("Selectionnez un modèle", ["Culture-G", "Villes-par-habitants", "Emojibot"])
+user_agent = st.sidebar.selectbox("Selectionnez un modèle", ["Culture-G", "Villes-par-habitants", "Emojibot"])
 
 # Culture-G : ag:56f583a3:20241214:untitled-agent:5acbcaed
 # Villes-par-habitants : ag:56f583a3:20241216:villes-par-habitants:babc8335
