@@ -19,7 +19,7 @@ if st.button("Vider l'historique"):
   st.session_state.messages = []
 
 
-choix = st.sidebar.radio(["Modèle", "Agent"],
+choix = st.radio(["Modèle", "Agent"],
                         index=None,
                         )
 
