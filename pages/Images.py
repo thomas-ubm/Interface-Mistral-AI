@@ -7,8 +7,6 @@ api_keys = st.sidebar.text_input("apikeys")
 client = Mistral(api_key=api_keys)
 
 
-  
-
 st.title("Analyse d'image")
 
 st.subheader("Saisir ici le lien vers l'image à analyser")
