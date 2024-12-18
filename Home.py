@@ -39,11 +39,8 @@ st.sidebar.image('https://upload.wikimedia.org/wikipedia/fr/thumb/2/24/Universit
 st.sidebar.video("https://www.youtube.com/watch?v=sgnrL7yo1TE")
 
 
-
-
-
 # Création d'un slider
-
+st.slider("Quel est votre age ?", [18,99])
 
 # Lecture d'un fichier csv avec mandas
 
