@@ -108,9 +108,10 @@ if prompt := st.chat_input("What is up?"):
 
 
 #read in the json
-df = pd.read_json(st.session_state.messages)
+print(st.session_state.messages)
+#df = pd.read_json(st.session_state.messages)
 # write the csv
-df.to_csv("histo.csv")
+#df.to_csv("histo.csv")
 
 
 
