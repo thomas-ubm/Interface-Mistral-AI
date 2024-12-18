@@ -41,7 +41,7 @@ if prompt := st.chat_input("What is up?"):
     st.session_state.messages.append({"role": "user", "content": prompt})
 
     # response = f"Echo: {prompt}"
-    response = get_ner(client, prompt)
+    response = get_chat(client, user_model, prompt)
     
     # Display assistant response in chat message container
     with st.chat_message("assistant"):
