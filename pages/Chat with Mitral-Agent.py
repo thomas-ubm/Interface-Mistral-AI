@@ -1,3 +1,5 @@
+from function import *
+from mistralai import Mistral
 import streamlit as st
 
 st.title("Echo Bot")
