@@ -41,6 +41,10 @@ if user_agent == "Emojibot" :
     user_agent = "ag:56f583a3:20241216:emojibot:3a89090a"
 
 
+with open('TEST.txt', mode='w') as f:
+    f.write ("test")
+
+
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
