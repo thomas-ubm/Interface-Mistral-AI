@@ -20,8 +20,12 @@ if st.button("Vider l'historique"):
 
 
 # Création d'un fichier
-with open('histo.csv', mode='w') as f: 
-    f.write ("")
+import csv
+
+with open('histp.csv', 'w') as csvfile:
+    fieldnames = ['Role', 'Contenu']
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    writer.writeheader()
 
 # Création d'un bouton
 with open('histo.csv', mode='rb') as f:
@@ -65,9 +69,9 @@ if prompt := st.chat_input("What is up?"):
     # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
 
-    # Création d'un fichier
-    with open('histo.csv', mode='w') as f:
-        f.write ({"role": "user", "content": prompt})
+    # Ecriture dans le fichier
+    with open('histp.csv', 'w') as csvfile:
+        writer.writerow({'Role': "user", 'Contenu': prompt})
 
 
     
