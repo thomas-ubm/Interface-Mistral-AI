@@ -42,9 +42,18 @@ st.sidebar.video("https://www.youtube.com/watch?v=sgnrL7yo1TE")
 # Création d'un slider
 user_age = st.slider("Quel est votre age ?", 18, 99, 30)
 
+# Création d'une liste
 user_country = st.selectbox("Selectionnez votre pays", ["France", "Espagne", "USA"])
 
+
 # Lecture d'un fichier csv avec pandas
+import pandas as pd
+path_url = "https://raw.githubusercontent.com/Quera-fr/My-Credit/refs/heads/main/Analyse%20des%20donn%C3%A9es/test.csv"
+
+df = pd.read_csv(path_url)
+
+st.write(df)
+
 
 
 
