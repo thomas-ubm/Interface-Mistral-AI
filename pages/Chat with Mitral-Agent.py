@@ -22,7 +22,7 @@ if st.button("Vider l'historique"):
 # Création d'un fichier
 import csv
 
-with open('histp.csv', 'w') as csvfile:
+with open('histo.csv', 'w') as csvfile:
     fieldnames = ['Role', 'Contenu']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     writer.writeheader()
@@ -70,8 +70,8 @@ if prompt := st.chat_input("What is up?"):
     st.session_state.messages.append({"role": "user", "content": prompt})
 
     # Ecriture dans le fichier
-    with open('histp.csv', 'w') as csvfile:
-        writer.writerow({'Role': "user", 'Contenu': prompt})
+    with open('histo.csv', 'w') as csvfile:
+        writer.writerow('Role': "user", 'Contenu': prompt)
 
 
     
@@ -88,4 +88,7 @@ if prompt := st.chat_input("What is up?"):
         st.markdown(response)
     # Add assistant response to chat history
     st.session_state.messages.append({"role": "assistant", "content": response})
-
+   
+    # Ecriture dans le fichier
+    with open('histo.csv', 'w') as csvfile:
+        writer.writerow('Role': "assistant", 'Contenu': response)
