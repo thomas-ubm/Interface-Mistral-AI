@@ -266,6 +266,28 @@ def get_trad(client, prompt):
     # Réponse de l'API
     return response.choices[0].message.content
 
-
+def get_img(client, img_url):
+  response = client.chat.complete(
+      #model="mistral-larg-latest",
+      model="pixtral-12b-2409",
+      messages=[{
+          
+          #'role' : "system",
+          #'content' : "Tu dois analyser des images....",
+          
+          'role' : "user",
+          'content' : [{
+                  'type' : 'text',
+                  'text' : "Décris-moi ce qui se trouve sur l'image envoyée au format json : {'titre' : 'titre_image', 'description': 'descritpion_image'}"
+          },
+          {
+                  'type' : 'image_url',
+                  'image_url' : img_url
+          }
+          # On pourrait ajouter une image, pour demander une comparaison entre les deux...
+          ]
+      }]
+  )
+  response.choices[0].message.content
 
 
