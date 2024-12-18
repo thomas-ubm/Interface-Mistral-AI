@@ -18,9 +18,14 @@ if "messages" not in st.session_state:
 if st.button("Vider l'historique"):
   st.session_state.messages = []
 
+
+# Création d'un fichier
+# with open('histo.csv', mode='w') as f:
+#    f.write ("")
+
 # Création d'un bouton
 with open('histo.csv', mode='rb') as f:
-    st.download_button(label='Télécharger l'historique', data=f, file_name='histo.csv')
+    st.download_button(label='Télécharger l\'historique', data=f, file_name='histo.csv')
 
 
 choix = st.sidebar.radio("Choisissez : ", ["Modèle", "Agent"], index=0)
@@ -60,6 +65,12 @@ if prompt := st.chat_input("What is up?"):
     # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
 
+    # Création d'un fichier
+    with open('histo.csv', mode='w') as f:
+        f.write (st.session_state.messages.append({"role": "user", "content": prompt}))
+
+
+    
     # response = f"Echo: {prompt}"
     if choix == "Modèle":
         st.write("Chat avec un modèle")
