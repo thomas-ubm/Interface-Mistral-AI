@@ -14,6 +14,6 @@ prompt = st.text_area("")
 # Création d'un bouton
 if st.button("Traduire"):
   st.write(prompt)
-  response = get_ner(client, prompt)
+  response = get_trad(client, prompt)
   st.write(response)
 
