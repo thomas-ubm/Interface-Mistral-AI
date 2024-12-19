@@ -2,7 +2,7 @@ import streamlit as st
 from function import * 
 
 # Création d'un titre
-st.title('Interface-Mistral-AI')
+st.title('Interface-Mistral-AI !')
 
 
 # Création d'un sous titre
