@@ -28,8 +28,8 @@ if st.button("Vider l'historique"):
 #    writer.writeheader()
 
 # Création d'un bouton
-with open('histo.csv', mode='rb') as f:
-    st.download_button(label='Télécharger l\'historique', data=f, file_name='histo.csv')
+#with open('histo.csv', mode='rb') as f:
+ #   st.download_button(label='Télécharger l\'historique', data=f, file_name='histo.csv')
 
 
 choix = st.sidebar.radio("Choisissez : ", ["Modèle", "Agent"], index=0)
@@ -80,15 +80,15 @@ if prompt := st.chat_input("What is up?"):
     #    writer.writerow({'Role': "user", 'Contenu': prompt})
 
 
-    
+ 
     # response = f"Echo: {prompt}"
-    if choix == "Modèle":
-        st.write("Chat avec un modèle")
-        response = get_chat(client, user_model, prompt)
-    else:
-        st.write("Chat avec un agent")
-        response = get_agent(client, user_agent, prompt)
-    
+    #if choix == "Modèle":
+    #    st.write("Chat avec un modèle")
+      #  response = get_chat(client, user_model, prompt)
+   # else:
+      #  st.write("Chat avec un agent")
+    response = get_agent(client, user_agent, prompt)
+  
     # Display assistant response in chat message container
     with st.chat_message("assistant"):
         st.markdown(response)
